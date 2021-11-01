@@ -240,7 +240,7 @@ class Train():
         return classifier, config.classifier_result_file_name_prefix
 
     def detector_train(self, log):
-                # 检测 GPU 可用,选择一个可用的 GPU 使用
+        # 检测 GPU 可用,选择一个可用的 GPU 使用
         try:
             gpu = gpu_utils.select_gpu(memory_require = config.detector_train_gpu_mem_require, tf_gpu_mem_growth=False)
         except Exception:
